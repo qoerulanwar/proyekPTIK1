@@ -28,12 +28,33 @@ int main() {
     while (true) {
 
         cout << "MENU" << endl;
+        cout << "1. input Data" << endl;
         cout << "2. Tampilkan Data" << endl;
         cout << "5. Keluar" << endl;
         cout << "Pilih menu: ";
         cin >> input;
 
-        if (input == 2) {
+        if (input == 1 && count < 100) {
+            // input data gunung
+            cout << "Nama: ";
+            cin >> dataGunung[count].nama;
+            cout << "Tinggi: ";
+            cin >> dataGunung[count].tinggi;
+            cout << "Lokasi: ";
+            cin >> dataGunung[count].lokasi;
+            cout << "Tipe Gunung: ";
+            cin >> dataGunung[count].tipeG;
+            cout << "Tahun Letusan Terakhir: ";
+            cin >> dataGunung[count].tahun_letusan_terakhir;
+            cout << "Total Letusan: ";
+            cin >> dataGunung[count].total_letusan;
+            cout << "Status: ";
+            cin >> dataGunung[count].status;
+
+            count++;
+        }
+
+        else if (input == 2) {
             // tampilkan data
             if (count == 0) {
                 cout << "Belum ada data gunung yang dimasukkan." << endl;
